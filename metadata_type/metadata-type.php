@@ -15,10 +15,20 @@ class Cidades_BR_Metadata_type extends \Tainacan\Metadata_Types\Metadata_Type {
 		$this->set_primitive_type(['string']);
 		$this->set_component('cidades-br-metadata-type');
 		$this->set_preview_template('
-			<div>
-				<div class="control is-clearfix">
-					<select class="input" placeholder="Estado" />
-					<select class="input" placeholder="Cidade" />
+			<div class="field">
+				<div class="field-body">
+					<div class="field is-grouped">
+						<div class="control is-expanded">
+							<span class="select is-fullwidth">
+								<select><option value="52">	Goiás </option></select>
+							</span>
+						</div>
+						<div class="control is-expanded">
+							<span class="select is-fullwidth">
+								<select><option value="5200050">Abadia de Goiás</option><option value="5200100">Abadiânia</option></select>
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		');

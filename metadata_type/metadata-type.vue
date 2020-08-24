@@ -1,7 +1,8 @@
 <template>
     <div v-if="itemMetadatum">
-        
-        <b-select 
+      <b-field grouped>
+        <b-select
+          expanded 
           v-model="selectedState"
           placeholder="Selecione um estado"
           @input="onInput"
@@ -14,6 +15,8 @@
           </option>
         </b-select>
         <b-select 
+          expanded
+          :disabled="!selectedState"
           v-model="selectedCity"
           placeholder="Selecione uma cidade"
           @input="onInput"
@@ -25,6 +28,7 @@
             {{ cidade }}
           </option>
         </b-select>
+      </b-field>
   </div>
 </template>
 
