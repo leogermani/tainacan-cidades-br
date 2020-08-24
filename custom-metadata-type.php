@@ -1,16 +1,16 @@
 <?php
 /*
-Plugin Name: Custom Metadata Type
-Plugin URI: https://tainacan.org/new
-Description: "A Custom Metadata Type for Tainacan, that does pretty much what the Numeric metadata type does, except for step validation and a built vue component."
-Author: "Your Name Here"
-Version: 0.1
+Plugin Name: Tainacan Cidades BR
+Plugin URI: https://tainacan.org/
+Description: Um plugin para oferecer o tipo de metadado 'cidades' no Tainacan, que busca em estados e cidades brasileiras.
+Author: Leo Germani
+Version: 0.1.1
 Text Domain: cidades-br-metadata-type
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
-add_action("tainacan-register-metadata-type", "register_metadata_type");
-function register_metadata_type($helper) {
+add_action("tainacan-register-metadata-type", "tainacan_cidades_br_register_metadata_type");
+function tainacan_cidades_br_register_metadata_type($helper) {
 
     // Registering the Class
     require_once( plugin_dir_path(__FILE__) . 'metadata_type/metadata-type.php' );
